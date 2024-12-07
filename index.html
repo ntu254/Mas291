@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nttu254.vn-mas291</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="mas291.css">
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
+    <script src="mas291.js" defer></script>
+</head>
+
+<body>
+<button id="menu-toggle">☰ Menu</button>
+    <div class="tab-container" position: fixed; width: 100%;">
+        <button class="tablink" onclick="openPage('test1', this, 'red')" id="defaultOpen">TEST 1</button>
+        <button class="tablink" onclick="openPage('test2', this, 'red')">TEST 2</button>
+        <button class="tablink" onclick="openPage('test3', this, 'red')">TEST 3</button>
+    </div>
+
+    <!-- test 1 -->
+    <div id="test1" class="tabcontent">
+        <div>
+            <div style="height: 10px; width: 100%; background-color: black; margin-top: 0px; margin-bottom: 40px;">
+            </div>
+            <h1 style="font-size: 50px;padding-left: 50px;">TEST 1: Chapter 1,2,3</h1>
+            <div style="height: 10px; background-color: black; width: 100%;">
+
+            </div>
+            <h1>Giới thiệu (Chapter 1)</h1>
+            <p>Xác xuất thống kê sử dụng, thu thập, phân tích <span style="color: red;">data</span> để đưa ra kết luận,
+                giải
+                quyết vấn đề...</p>
+            <h4>2 phương pháp thống kê chính:</h4>
+            <p>- descriptive statistics (thống kê mô tả): tóm tắt, trình bày dữ liệu<br />- inferential statistics (thống kê suy luận): mô tả, suy đoán tính chất một tổng thể dựa trên 1 mẫu</p>
+            <h4>Các keywords</h4>
+            <p>- Data: Bao gồm thông tin đến từ các quan sát, đếm, đo lường hoặc phản hồi.<br>
+                - Population: Là tổng thể (về lĩnh vực của bài toán). <br>
+                - Parameter: Phép đo(số), mô tả đặc tính của <span style="color: red;">Population</span>. <br>
+                - Sample: Sub-collection được lấy từ <span style="color: red;">Population</span>. <br>
+                - Statistic: Phép đo(số), mô tả đặc tính của <span style="color: red;">Sample</span>. <br>
+                => Chúng ta sử dụng <span style="color: red;">Statistic</span> để suy luận <span
+                    style="color: red;">Parameter</span>, nên chú ý nhầm lẫn giữa thông số của <span
+                    style="color: red;">Population(Parameter)</span> và của <span
+                    style="color: red;">Sample(Statistic)</span></p>
+
+            <p>
+                Ví dụ: Muốn tính lương trung bình của những người đã đi làm, ta khảo sát 2000 người. Từ đây ta thấy tất
+                cả
+                những người đã đi làm
+                là <span style="color: red;">Population</span>, 2000 người kia là <span
+                    style="color: red;">Sample</span>.
+            </p>
+
+            <h4>Phân loại dữ liệu</h4>
+            <p>- Qualitative data (định tính): Không thể đếm, như video, document, ... .<br>
+                - Quantitative data (định lượng): Số thực, như chiều cao cân nặng, khoảng cách, ... . <br>
+                - Discrete data (dời dạc): đếm được hoặc vô hạn đếm được, như là số người, lượng chó, ... . <br>
+                - Continuous data (liên tục): có thể là bất kì số nào, như chiều cao, tốc độ, ... (nói chung các phép
+                đo).
+                <br>
+            <p>
+
+            <h4>Thu thập dữ liệu</h4>
+            <p>- Retrospective study: sử dụng những dữ liệu từ trước đó, vd: hỏi người bệnh về tiền sử bệnh của họ để
+                nghiên
+                cứu .<br>
+                - Observational study: Nghiên cứu, quan sát một phần của tổng thể, vd: nghiên cứu 500 người mắc bệnh lao
+                để
+                đưa ra kết luận gì đó về người mắc bệnh <br>
+                - Experiment: Thực nghiệm trên một phần của tổng thể, sau đó quan sát kết quá, vd: cho cún ăn bả, rồi
+                lấy số
+                liệu sau khi săn để nghiên cứu . <br>
+            <p>
+
+        </div>
+
+        <!-- chapter 2 -->
+        <div class="chapter2">
+            <div style="height: 10px; width: 100%; background-color: black; margin-top: 72px; margin-bottom: 40px;">
+            </div>
+
+            <div class="chapter2-advice">
+                <p>
+                    chapter này không khó, nên cố gắng học hiểu hơn là cố học thuộc công thức, chỉ cần hiểu biến rời
+                    rạc, biến liên tục, xác suất có điều kiện với hiểu qua định lý bayes là khá ổn
+                </p>
+            </div>
+
+            <div>
+                <h1>Chapter 2</h1>
+                <h3>2.1 Sample spaces and events (Không gian mẫu và biến cố)</h3>
+                <p><span style="color: red;">Random experiment</span>: là một thực nghiệm để dẫn tới những kết quả khả
+                    thi
+                    <br>
+                    Ví dụ: <br>
+                    Ramdom experiment: tung 1 đồng xu <br>
+                    Outcomes (kết quả): xấp hoặc ngửa
+                </p>
+                <p><span style="color: red;">Sample space</span>: Không gian mẫu, chứa tất cả những kết quả có khả năng
+                    xảy
+                    ra, kí hiệu là S.
+                    <br>
+                    Ví dụ: tung đồng xu 2 lần<br>
+                    S = {xấp xấp, xấp ngửa, ngửa ngửa, ngửa xấp} <br>
+                </p>
+                <h4>Tree diagram (biểu đồ cây)</h4>
+                <p>Không gian mẫu có thể được biểu diễn dạng biểu đồ cây
+                    <br>
+                    Ví dụ: tung 1 đồng xu sau đó tung tiếp 1 cái xúc xắc, tất cả trường hợp khả dĩ:<br>
+                </p>
+                <div>
+                    <img src="img/treediagram.png" alt="">
+                </div>
+                <p>Event (biến cố): tập con của không gian mẫu
+                    <br>
+                    Ví dụ: tung 1 đồng xu 3 lần, biến cố là đúng 2 lần ra mặt sấp, tính xác suất<br>
+                    <span style="color: red;">Union (hợp)</span> của A và B: A ∪ B, đúng khi nằm trong A hoặc B hoặc cả
+                    hai<br>
+                    <span style="color: red;">Intersection (giao)</span> của A và B: A ∩ B, đúng khi nằm trong cả hai
+                    <br>
+                    <span style="color: red;">Complement (đối)</span> của A: A', ngược lại với A <br>
+                </p>
+                <h4>Counting techniques (Kĩ thuật đếm)</h4>
+                <p>
+                    <u>Multiplication Rule (quy tắc nhân): </u>
+                    <br>
+                    Nếu quá trình cần k bước, bước 1 có n1 cách, bước 2 có n2 cách, ... thì số cách để đi đến kết thúc:
+                    n1 x n2 x ... x nk
+
+                    <br>
+                    <u>Permutations (hoán vị): </u>
+                    <br>
+                    Số lượng hoán vị là chính là chỉnh hợp, số cách chọn r phần tử từ n phần tử và có sắp xếp, ví dụ
+                    như
+                    chọn từ 3 người A, B, C sẽ có các cách là:
+                    ABC, ACB, BAC, BCA, CAB, CBA. Công thức số cách: nPr (casio).
+                    <br>
+                    <u>Combination (tổ hợp): </u>
+                    <br>
+                    Rất quen thuộc, số cách chọn r phần tử từ n phần tử và không theo thứ tự, ví dụ như chọn 2 người từ
+                    3
+                    người A, B, C là: A và B, B và C, C và A. Công thức số cách: nCr (casio).
+
+                </p>
+
+                <h3>2.2 Probability (xác xuất)</h3>
+                <p>
+                    Trong một không gian mẫu có n khả năng xảy xa, xác xuất để xảy ra biến cố trong một phép thử là như
+                    nhau
+                    thì xác xuất mỗi cái đều là 1/n. Ví dụ
+                    như tung xúc xắc 1 lần thì khả năng xảy ra mặt 1, 2, 3, 4, 5, 6 là như nhau xác xuất đều là 1/6.
+                    <br>
+                    <u>Mutually Exclusive Events (biến cố xung khắc):</u>
+                    Là các biến cố không thể đồng thời xảy ra, A ∩ B = ∅. Ví dụ như tung xúc xắc, không thể đồng thời ra
+                    mặt
+                    1 hoặc 2.
+
+                </p>
+
+                <h3>2.3 Addition Rules (quy tắc cộng)</h3>
+
+                <p>
+                    P/S: không nên cố nhớ những công thức này, tự vẽ sơ đồ ven sẽ dễ hiểu hơn rất nhiều, tự vẽ ra đi?
+                    <br>
+
+                    P(A ∪ B) = P(A) + P(B) − P(A ∩ B) <br>
+                    P(A ∪ B ∪ C) = P(A) + P(B) + P(C) − P(A ∩ B) − P(A ∩ C) − P(B ∩ C) + P(A ∩ B ∩ C) <br>
+                    Nếu A và B xung khắc: P(A ∪ B) = P(A) + P(B) <br>
+                    note: P(A') = 1 - P(A) <br>
+                </p>
+
+                <h3>2.4 Conditional Probability (xác suất có điều kiện)</h3>
+                <p>
+                    Xác suất để xảy ra B với điều kiện A, tức là xác suất xảy ra B khi mà A đã thỏa mãn. Kí hiệu P(B|A) : <br>
+                    <img src="img/241.png" alt=""> <br> <br>
+                    Ví dụ xác suất 1 người béo phì(A) là 30%, 1 người tiểu đường(B) là 3%, 1 người béo phì hoặc tiểu
+                    đường(A
+                    ∪ B) là 31%.
+                    Tính xác xuất người bị tiểu đường khi đã béo phì. <br>
+                    Ta thấy P(A U B) = 31% = 0.31. <br>
+                    => P(A ∩ B) = 0.02 (công thức bên trên, nhưng vẽ biểu đồ ven là thấy ngay) <br>
+                    => P(B|A) = P(A ∩ B)/P(A) = 0.02/0.3 <br>
+
+                </p>
+
+                <h3>2.5 Multiplication and Total Probability Rules (xác suất tổng)</h3>
+                <p>
+                    <u>Multiplication Rule (quy tắc nhân) : </u> <br>
+                    P(A ∩ B) = P(A)P(B|A) = P(B)P(A|B)
+                    <br>
+                    note: cái này cũng vẽ biểu đồ ven ra, không thì nhiều người dễ lú <br> <br>
+                    <u>Total Probability Rule (quy tắc tổng xác suất, hình 1)</u> <br>
+                    P(B) = P(A)P(B|A) + P(A')P(B|A') <br>
+                    <img src="img/total.png" alt="">
+                    <br>
+                    Các biến cố E1, E2, . . . , Ek gọi là <span style="color: red;">exhaustive</span> nếu: <br>
+                    E1 ∪ E2 ∪ . . . ∪ Ek = S <br>
+                    <u>Total Probability Rule (quy tắc tổng xác suất)</u> <br>
+                    E1, E2, ... Ek là xung khắc và exhaustive (hình 2) thì: <br>
+                    P(B) = P(E1)P(B|E1) + P(E2)P(B|E2) + . . . + P(Ek )P(B|Ek) <br>
+                </p>
+                <h3>2.6 Independence (sự độc lập)</h3>
+                <p>
+                    2 biến cố A và B độc lập nếu 1 trong các điều sau đúng: <br>
+                    (1) P(A|B) = P(A) <br>
+                    (2) P(B|A) = P(B) <br>
+                    (3) P(A ∩ B) = P(A)P(B) <br>
+
+                    note: nếu test 2 biến cố có độc lập hay không thường dùng cách 3.
+                </p>
+                </p>
+                <h3>2.7 Bayes’ Theorem (định lý Bayes)</h3>
+                <p>
+                    E1, E2, ... Ek là xung khắc và exhaustive, B là một biến cố bất kì: <br>
+                    <img src="img/bayes.png" alt=""> <br>
+                    Note: <br>
+                    <img src="img/242.png" alt=""> <br>
+                    Thực ra trông loằng ngoằng nhưng nó chính chính là chỗ quy tắc tổng xác suất phần 2.5 .
+                </p>
+                <h3>2.7 Ramdom variable (biến ngẫu nhiên)</h3>
+                <p>
+                    <u>Discrete random variable</u> là biến rời rạc, hữu hạn hoặc vô hạn đếm được, như số lượng, ... .
+                    <br>
+                    <u>Continuous random variable</u> là biến liên tục, không đếm được, như số đo, ... . <br>
+                </p>
+            </div>
+        </div>
+
+        <!-- chapter 3 -->
+        <div>
+            <div style="height: 10px; width: 100%; background-color: black; margin-top: 72px; margin-bottom: 40px;">
+            </div>
+
+            <div>
+
+                <div class="chapter2-advice">
+                    <p>
+                        Chapter này nói về các thể loại bài toán xác suất liên quan đến biến rời rạc. Mỗi bài toán đều
+                        có
+                        đặc
+                        trưng riêng, cần chút chút tư duy, không học được hết thì chỉ cố học vài dạng dễ không lại lú.
+                    </p>
+                </div>
+
+                <h2>Chapter 3. Discrete Random Variables and Probability Distributions</h2>
+                <h2>(Biến ngẫu nhiên rời rạc và phân bố xác suất)</h2>
+
+                <h3>3.1 Discrete Random Variables (biến ngẫu nhiên rời rạc)</h3>
+                <p>
+                    Định nghĩa:
+                    Biến rời rạc là biến hữu hạn hoặc vô hạn đếm được. vd: số lượng người, lượng trộm chó, ... . <br>
+                </p>
+
+                <h3>3.2 Probability distributions and Probability Mass Functions</h3>
+                <h3>(Phân bố xác suất và hàm khối lượng xác suất)</h3>
+                <p>
+                    Định nghĩa:
+                    Probability distributions (phân bố xác suất) là bảng, công thức hay biểu đồ, nó biểu diễn xác xuất
+                    theo các giá trị của biến cố.
+                    <br>
+                    <img src="img/probabilitydis.png" alt=""> <br>
+                <p>
+                    VD: tung 1 đồng xu 4 lần, X biểu diễn cho số mặt chẵn xuất hiện, vậy nên X có thể nhận các giá trị
+                    là 0,
+                    1, 2, 3, 4, sẽ được điền vào hàng X,
+                    còn hàng P tự tính. <br>
+                    <span style="color: red;">Note</span>: <br>
+                    +, p<sub>i</sub>= P(X=x), có nghĩa là p<sub>1</sub>= P(X=1): xác suất để x=1, ... <br>
+                    +, p1 + p2 + p3 + ... pn = 1 <br> <br>
+
+                    <u>Probability Mass Function (hàm khối lượng xác suất)</u> <br>
+                    <span style="color: red;">f(x<sub>i</sub>) = P(X=x<sub>i</sub>)</span> với mọi i = 1, 2, ... n <br>
+                    +, f(x<sub>i</sub>) >= 0 với mọi i = 1, 2, ... n. <br>
+                    +, f(x<sub>1</sub>) + f(x<sub>2</sub>) + ... + f(x<sub>n</sub>) = 1 <br>
+                    <br>
+                    Đây là f(x), tổng xác suất của tất cả các trường hợp xảy ra phải = 1, và không có chuyện xác
+                    suất của 1 biến cố &#60; 0 bởi vì nó không thể xảy ra thì = 0, không thì > 0.
+                </p>
+                </p>
+
+                <h3>3.3 Cumulative Distribution Function</h3>
+                <h3>(Hàm phân bố tích lũy)</h3>
+                <p>
+                    Còn cái này là F(x), nhiều người đôi lúc nhầm giữa 2 cái F này. Hàm F(x): <br>
+                    <img src="img/cumulativedis.png" alt="">
+                    <br>
+                    Ta thấy nó gọi là tích lũy, bởi vì nó là tổng của tất cả xác suất từ giá trị nhỏ nhất đến giá trị
+                    của x
+                    mà ta đang tính.
+                    Về mặt toán học, nó giống như tích phân từ hàm nhỏ vậy. Sau này học sang biến liên tục ta sẽ thấy rõ
+                    nét
+                    hơn về điều này.
+                </p>
+
+                <h3>3.4 Mean and Variance of a Discrete Random Variable</h3>
+                <h3>(Kỳ vọng và phương sai trong biến ngẫu nhiên rời rạc)</h3>
+                <p>
+                    Từ đây, ta sẽ được tiếp cận với một số khái niệm mới sẽ đi suốt từ đây đến hết môn. <br>
+
+                    Ta có : <u>Cho X là biến ngẫu nhiên rời rạc với các giá trị khả dĩ x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ... x<sub>n</sub>. Sau đây sẽ là
+                        các
+                        giá trị của X :</u>
+                    <br> <br>
+                    - Đầu tiên, <span style="color: red;">Mean</span>, còn gọi là <span style="color: red;">Expected
+                        value</span>, là giá trị kỳ vọng của dữ liệu. Ký hiệu là μ hoặc E(X) :
+                    <br>
+                    <img src="img/mean.png" alt="">
+                    <br> <br>
+                    - Tiếp theo, <span style="color: red;">Variance</span>, gọi là phương sai, chúng ta có thể ngầm hiều
+                    đó
+                    là giá trị trung bình của tổng bình phương sai số của dữ liệu.
+                    Ký hiệu là σ&#178; hoặc V(X) :
+                    <br>
+                    <img src="img/variance.png" alt=""> (Tính tay thì dùng công thức cuối)
+                    <br> <br>
+                    - Cuối cùng, <span style="color: red;">Standard deviation</span>, gọi là độ lệch chuẩn, lệch tức là
+                    sai
+                    số, chúng ta hiểu rằng trên kia là tổng của bình phương, vậy cái này sẽ là căn của cái trên kia là
+                    xong
+                    <br>
+                    <img src="img/standarddeviation.png" alt=""> 
+                    <br> <br>
+                    - Ngoài ra, nếu áp dụng cho 1 hàm của X, thì <span style="color: red;">mean</span> của hàm đó sẽ là:
+                    <br>
+                    <img src="img/meanoffunction.png" alt="">
+                    <br>
+                </p>
+
+                <h3>3.5 Discrete Uniform Distribution</h3>
+                <h3>(Phân bố đồng đều rời rạc)</h3>
+                <p>
+                    Phần này khá dễ, nên học hiểu, không hiểu được thì tạch môn. <br>
+                    <u>Một biến ngẫu nhiên X có phân phối đều rời rạc nếu mỗi n giá trị trong khoảng của nó, chẳng hạn,
+                        x1,
+                        x2, . . . , xn , có xác suất bằng nhau.</u>
+                    <br>
+                    <img src="img/uniformdiscrete.png" alt="">
+                    <br> <br>
+                    <u>Nếu biến rời rạc phân bố đồng đều và là các số nguyên liên tiếp : a, a+1, a+2, ... b. Ta có <span
+                            style="color: red;">mean</span> và <span style="color: red;">variance</span> : </u>
+                    <br>
+                    <img src="img/meanuniformdis.png" alt="">
+                    <br> <br>
+                </p>
+
+                <h3>3.6 Binomial Distribution</h3>
+                <h3>(Phân phối nhị thức)</h3>
+                <p>
+                    Bài này bao gồm n phép thử, mỗi phép thử đều độc lập và không liên quan đến nhau. Mỗi phép thử
+                    có 2
+                    khả năng là “success” và “failure”. Và xác suất vào “success” trong mỗi phép thử
+                    là <span style="color: red;">p</span>. <br> <br>
+                    VD: Mỗi ngày bạn đều đánh đề, mỗi lần đánh bạn sẽ có cơ hội là thắng(“success”) hoặc
+                    thua(“failure”). Như bạn thấy, mỗi hôm đánh đề chả liên quan gì đến nhau nên người ta gọi đó là độc lập.
+                    Bạn nợ môn và về nhà 30 ngày để đánh đề, vậy n = 30, Và mỗi lần đánh, bạn có xác suất thắng là
+                    p = 1/100. Như bạn thấy dạng này sẽ có 2 thông số là n và p. <br>
+                    <br>
+                    Công thức xác suất cho x lần bạn có được “success” trong n lần thử là : <br>
+                    <img src="img/binorminalDis.png" alt=""> <br>
+                    Hơi dài dòng, nhưng thực ra nó đơn giản và nếu hiểu thì không cần nhớ công thức. Nó có nghĩa
+                    là
+                    trong n phép thử, ta có thể chọn ra x lần để “success” là nCx (tổ hợp), và vì
+                    mỗi lần “success” thì có xác suất là p nên ta có p^x, còn lại n-x lần “failure” thì là (1-p)^(n-x). <br>
+                    <br>
+                    <span style="color: red;">Mean</span> và <span style="color: red;">variance</span> của Binomial
+                    Distribution: <br>
+                    <img src="img/binormialMean.png" alt="">
+                    <br>
+
+                </p>
+
+                <h3>3.7 Geometric and Negative Binomial Distribution</h3>
+                <p>
+                    Dạng bài này cũng như dạng trên, nhưng chỉ có thông số p và tính chất bài toán nó hơi khác 1 chút.
+                    <br> <br>
+                    <u>Geometric Distribution:</u> <br> <br>
+                    Lấy ví dụ đánh đề lúc nãy: mỗi ngày bạn đều đánh đề, mỗi lần đánh bạn sẽ có cơ hội là
+                    thắng(“success”)
+                    hoặc thua(“failure”). bạn thấy rằng mỗi hôm đánh đề chả liên quan gì đến nhau, người ta gọi đó là độc lập.
+                    Mỗi lần đánh, bạn có xác suất thắng là p = 1/100. Bài toán sẽ là bạn đánh đến bao giờ thắng(lần đầu)
+                    thì thôi. Như bạn thấy dạng này sẽ chỉ có 1 thông số p. Bài toán mà thử đến khi đạt được “success” lần đầu
+                    thì nó sẽ là phân bố <span style="color: red;">geometric</span>.
+                    <br> <br>
+                    Xác suất để thử đến <span style="color: red;"> lần thứ x</span> ta sẽ thu được “success” đầu tiên: <br>
+                    <img src="img/geometricP.png" alt="">
+                    <br>
+                    Giải thích công thức như sau: đến lần thứ x bạn sẽ được “success”, vậy thì ta sẽ có x-1 những lần trước
+                    đều ra “failure”, mà mỗi lần “failure” sẽ có xác suất 1-p, suy ra ta có (1-p)^(x-1), sau đó nhân thêm p là xác suất ra
+                    “success” tại lần thứ x là xong.
+                    <br> <br>
+                    <span style="color: red;">Mean</span> và <span style="color: red;">variance</span> của Geometric
+                    Distribution: <br>
+                    <img src="img/geometricMean.png" alt="">
+                    <br> <br>
+                    <u>Negative Binomial Distribution:</u> <br> <br>
+                    Khá giống như bài trên, nhưng mà bài toán sẽ là bạn <span style="color: red;">cần x phép thử</span> để thu được <span style="color: red;">r “success”</span> . Tất
+                    nhiên là
+                    phép thử cuối sẽ là “success” vì khi thu được
+                    r “success” thì ta sẽ dừng luôn, và r phải nhỏ hơn hoặc bằng x. <br>
+                    Xác suất để cần x phép thử ta thu được r “success”: <br>
+                    <img src="img/negativeP.png" alt="">
+                    <br>
+                    Giải thích công thức: Trong x phép thử, sẽ có r lần là “success”, nhưng vì phép thử cuối chắc chắn
+                    “success” nên ta chỉ xét x-1 phép thử trước đó và trong x-1 phép thử đó có r-1 lần “success”, vậy ta sẽ có (x-1)C(r-1) (tổ hợp chập r-1 của x-1),
+                    rồi nhân với (1-p)^(x-r) vì có tổng cộng x-r lần là “failure”, cuối cùng nhân với p^r vì tổng cộng r lần “success”.
+                    <br> <br>
+                    <span style="color: red;">Mean</span> và <span style="color: red;">variance</span> của Negative
+                    Binormial Distribution: <br>
+                    <img src="img/negativeMean.png" alt="">
+                    <br>
+                </p>
+
+                <h3>3.8 Hypergeometric Distribution</h3>
+                <p>
+                    Cho N cái, trong đó có K là “success”, N-K cái là “failure”. Bài toán là lấy n cái từ trong
+                    đó, và trong n chứa x “success”., Xác suất để có điều đó là:<br>
+                    <img src="img/hypogeometricP.png" alt="">
+                    <br>
+                    Giải thích: Tử số sẽ là số cách chọn ra n cái, trong đó có chứa x “success”
+                    từ K cái “success” là KCx (tổ hợp chập x của K), và lấy n-x trong N-K cái
+                    là “failure” là (N-K)C(n-x) (tổ hợp chập n-x của N-K), nhân 2 thứ đó ta được số cách chọn thỏa mãn.  Mẫu số là tổng số cách
+                    chọn ra n cái từ N cái ban đầu. Vậy số cách chọn thỏa mãn chia cho tổng tố cách chọn ta có xác suất.
+                    <br> <br>
+                    <span style="color: red;">Mean</span> và <span style="color: red;">variance</span> của
+                    Hypergeometric
+                    Distribution: <br>
+                    <img src="img/hypogeometricMean.png" alt="">
+                    <br>
+                </p>
+
+                <h3>3.9 Poisson Distribution</h3>
+                <p>
+                    Đây là loại phân bố trên không gian hay thời gian, có một thông số duy nhất là λ. Thể hiện cho λ
+                    cái gì đấy trên một khoảng không gian hay thời gian nào đó. Ví dụ như trung bình bạn có 5 cuộc gọi trên 1 ngày thì tức
+                    là λ = 5. <br> <br>
+                    <u>Chú ý một điều là đơn vị của khoảng không gian/ thời gian kia giữa đề với câu hỏi phải bằng nhau, nếu không thì ta phải
+                        tự quy đổi. Ví dụ như đề cho 5 cuộc gọi / 1 ngày, mà câu hỏi là tính xác suất để có 8 cuộc gọi/ 2 ngày thì lúc này
+                        λ = 10, bởi ta phải đổi sang là có trung bình 10 cuộc gọi / 2 ngày
+                    </u> <br> <br>
+                    Xác suất để có x cái / 1 khoảng là: <br>
+                    <img src="img/possionP.png" alt="">
+                    <br> <br>
+                    <span style="color: red;">Mean</span> và <span style="color: red;">variance</span> của Poisson
+                    Distribution: <br> 
+                    <img src="img/possionMean.png" alt="">
+                    <br>
+                    Riêng Poisson thì 2 cái này bằng nhau nhé!
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- test 2 -->
+    <div id="test2" class="tabcontent">
+        <!-- chapter 4 -->
+        <div>
+            <div style="height: 10px; width: 100%; background-color: black; margin-top: 0px; margin-bottom: 40px;">
+            </div>
+
+            <h1 style="font-size: 50px;padding-left: 50px;">TEST 2: Chapter 4,6,7</h1>
+            <div style="height: 10px; background-color: black; width: 100%;"></div>
+            <div style="margin-top: 20px;" class="chapter2-advice">
+                <p>
+                    Chapter 3 là biến ngẫu nhiên rời rạc thì chapter này nói về loại biến còn lại: biến liên tục. Nó
+                    sẽ hơi khó hơn 1 chút so với
+                    biến rời rạc, nặng về toán hơn và cũng yêu cầu tư duy tốt hơn. Chúng cũng có các loại tham số và loại
+                    hàm như biến rời rạc: <span style="color: red;">hàm phân bố(density function), hàm tích lũy (Cumulative), kỳ vọng(mean), phương sai (variance), độ lệch chuẩn (standard deviation)</span> .
+                    Và sau đó ta sẽ được tiếp cận với loại khái niệm mới sẽ đi cùng xuyên suốt đến hết môn học: <span style="color: red;"> phân bố chuẩn (normal distributions)</span>.
+                </p>
+            </div>
+
+            <div>
+                <h1>Chapter 4: Continuous Random Variables and Probability Distribution</h1>
+                <h3>(Biến ngẫu nhiên liên tục và phân bố xác suất)</h3>
+
+                <h3>4.1 Continuous Random Variables (biến ngẫu nhiên liên tục)</h3>
+                <p>
+                    Just a definition: <br>
+                    Biến ngẫu nhiên liên tục (Continuous Random Variables) là biến ngẫu nhiên có một khoảng các số thực cho các khả năng của nó. <br> <br>
+                    VD: tốc độ, xe bạn có thể đi trong khoảng 0-50km/h, vậy bạn có thể đạt bất kì giá trị nào, 40.00001, 25, 36.9999, ... .
+                    <br>
+                </p>
+                <h3>4.2 Probability Distributions and Probability Density Functions (phân bố xác suất và hàm mật độ xác
+                    suất)</h3>
+                <p>
+                    f(x) là hàm phân bố xác suất của biến ngẫu nhiên X nếu :
+                    <br>
+                    <img src="img/continuousDis.png" alt="">
+                    <br>
+                    Đây là hàm phân bố, nó liên tục chứ không giống với biến rời rạc. Đối với biến rời rạc, mỗi giá trị
+                    của
+                    X nó sẽ có
+                    giá trị cụ thể của X kèm theo nó. Nhưng với biến liên tục, nó sẽ có vô hạn giá trị nên xác suất để
+                    xảy
+                    ra giá trị cụ thể sẽ = 0.
+                    Vậy nên ta thường tính xác suất theo 1 khoảng, nó sẽ bằng tích phân (hay diện tích) trong khoảng đó.
+                    <br>
+                    <img src="img/continuousDia.png" alt="">
+                    <br>
+                    Như hình trên ta thấy xác suất của X để nó nằm trong khoảng a và b là tích phân từ a đến b, hay diện
+                    tích trong khoảng đó.
+                    <br>
+                    <img src="img/aAndB.png" alt="">
+                    <br>
+                    Chú ý 1 điều rằng dấu "&#60;" và "≤" tương đương nhau trong biến liên tục, bởi xác suất để xảy ra giá
+                    trị cụ thể luôn = 0.
+                    Bạn thử tưởng tượng khi đi xe, bạn không thể nào đi đúng 40Km/h được, bởi có thể bạn đang đi
+                    39.99999
+                    km/h hay 40.0001km/h. Chẳng có gì là tuyệt đối cả.
+                </p>
+
+                <h3>4.3 Cumulative Distribution Functions (Hàm phân bố tích lũy)</h3>
+                <p>
+                    Hàm phân bố tích lũy: <br>
+                    <img src="img/cumulativeContinue.png" alt="">
+                    <br>
+                    Cũng giống như bên phần rời rạc thì phần liên tục cũng có concept tương tự, là tại giá trị x thì F(x) sẽ có
+                    giá trị là xác suất để ≤ x. ta thấy nó sẽ là tích phân từ −∞, nhưng nếu đề cho khoảng giá trị ban
+                    đầu là a≤X≤b thì ta có thể thay −∞ bằng a để tính F(x).
+                    <br>
+                    <img src="img/hieuHaiKhong.png" alt="">
+                    <br>
+                    Công thức trên khá dễ để hiểu và cũng hay dùng, giá trị của F(b) bằng xác suất để X≤b, F(a) là xác
+                    suất
+                    để X≤a,
+                    vậy thì xác suất để a≤X≤b sẽ là F(b)-F(a).
+                    <br>
+                </p>
+                <h3>4.4 Mean and Variance of a Continuous Random Variable (Kỳ vọng và phương sai của biến liên tục)</h3>
+                <p>
+                    f(x) là density function (hàm phân bố), ta có: <br>
+                    <span style="color: red;">mean (kỳ vọng) :</span>
+                    <br>
+                    <img src="img/meanOfContinuous.png" alt="">
+                    <br>
+                    <span style="color: red;">variance (phương sai) :</span>
+                    <br>
+                    <img src="img/varianceOfConti.png" alt="">
+                    <br>
+                    <span style="color: red;">standard deviation (độ lệch chuẩn) :</span>
+                    <br>
+                    <img src="img/standardOfConti.png" alt="">
+                    <br>
+                </p>
+
+                <h3>4.5 Continuous Uniform Distribution (phân bố đồng đều liên tục)</h3>
+                <p>
+                    Cũng tương tự như biến rời rạc, biến liên tục cũng có phần đồng đều, khá dễ và chúng có dạng:
+                    <br>
+                    <img src="img/uniformOfConti.png" alt="">
+                    <br>
+                    Đồ thị:
+                    <br>
+                    <img src="img/uniformDiaOfCon.png" alt="">
+                    <br>
+
+                    <span style="color: red;">mean (kỳ vọng) :</span> và <span style="color: red;">variance (phương sai)
+                        :</span>
+                    <br>
+                    <img src="img/meanOfUniformCon.png" alt="">
+                    <br>
+                    <span style="color: red;">Cumulative function (Hàm tích lũy) </span> của biến liên tục phân bố đồng
+                    đều:
+                    <br>
+                    <img src="img/cumulativeOfUniOfCon.png" alt="">
+                    <br>
+
+                <h3>4.6 Normal Distribution (Phân bố chuẩn)</h3>
+                <p>
+                    <u>Phần này quan trọng, nó sẽ liên quan đến nhiều thứ về sau. Nó sẽ sử dụng cho các bài toán mang tính chất có lượng dữ liệu rất lớn.
+                        Sau này ta sẽ thấy họ sử dụng cái này để ước lượng các thông số của tổng thể (Population) thông qua một phần dữ liệu (Sample). <br>
+                    </u>
+                    VD: nghiên cứu lương 1000 người dân để đánh giá lương trung bình của toàn dân số.
+
+                    <br>
+                    <br>
+                    Biến ngẫu nhiên X sẽ được coi là có phân bố chuẩn (normal distribution) với tham số μ và σ&#178;, ký
+                    hiệu X
+                    ∼ N(μ, σ&#178;),
+                    nếu như hàm phân bố xác suất của nó là: <br>
+                    <img src="img/normalDisFunc.png" alt="">
+                    <br>
+                    <br>
+                    Tin vui là cái hàm trên bạn không phải nhớ, chỉ là giới thiệu qua thôi.
+                    Để dễ hình dung hơn về <span style="color: red;">mean μ </span>và <span style="color: red;">variance
+                        σ&#178;
+                    </span>, ta quan sát biểu đồ sau:
+                    <br>
+                    <img src="img/exampleNormalDis.png" alt="">
+                    <br>
+                    Ta thấy rằng μ chính là kỳ vọng, giá trị trung bình của Population(tổng thể), các giá trị sẽ tập
+                    trung
+                    nhiều về đó, còn σ&#178; biểu diễn cho sai số nên dễ dàng thấy rằng
+                    phương sai càng lớn thì đồ thì sẽ thoải hơn, không tập trung nhiều gần μ bằng khi σ&#178; nhỏ. Và cái này
+                    sẽ
+                    giúp
+                    bạn hiểu bản chất hơn thôi, chứ thi thì không có phần đồ thị này.
+                    <br> <br>
+                    <span style="color: red;">mean (kỳ vọng) :</span> và <span style="color: red;">variance (phương sai)
+                        :</span>
+                    <br>
+                    <img src="img/meanOfNormal.png" alt="">
+                    <br>
+                <div style="border: 2px solid black;">
+                    <p>
+                        Standard Normal Distribution :
+                        <br>
+                        Từ đây, chúng ta sẽ không dùng biểu đồ như bên trên nữa, mà mọi bài toán liên quan đến phân bố
+                        chuẩn
+                        sẽ được quy về Z.
+                        với các tham số μ = 0, σ = 1, nó kiểu như đồ thị phân bố của các độ lệch chia cho <span
+                            style="color: red;"> standard deviation (độ lệch chuẩn)</span>. Đồ thị nó sẽ như này:
+                        <br>
+                        <img src="img/diagramOfZ.png" alt="">
+                        <br>
+                        <br>
+                        Còn hàm Cumulative (tích lũy) của nó sẽ như sau:
+                        <br>
+                        <img src="img/cumulativeZ.png" alt="">
+                        <br>
+                        Cái này dùng nhiều, nó là diện tích từ z trở về trước, là xác suất để Z ≤ z, VD:
+                        <br>
+                        <img src="img/exampleOfPZ.png" alt="">
+                        <br>
+                        <br>
+                        Khi ta có giá trị <span style="color: red;">μ , σ</span> của X, thì ta sẽ chuyển sang Z bằng
+                        cách:
+                        <br>
+                        <img src="img/standardizeToZ.png" alt="">
+                        <br>
+                        <br>
+                        Ta sẽ tính xác suất khi X nhỏ hơn a bằng cách quy đổi sang giá trị của z, và đồ thị của Z luôn
+                        cố
+                        định cho mọi bài toán: <br>
+                        <img src="img/pOfZ.png" alt="">
+                        <br>
+                    </p>
+                </div>
+
+                </p>
+
+                <h3>4.7 Normal Approximation to the Binomial and Poisson Distributions</h3>
+                <h4>(Phân bố xấp xỉ chuẩn cho Binomial and Poisson)</h4>
+                <p>
+                    Binomial and Poisson là 2 loại phân bố ta đã học ở chapter 3. Nhưng mà khi đó ta chỉ làm với những
+                    thông
+                    số nhỏ, bạn thử tưởng tượng
+                    với binomial, khi ta có rất nhiều phép thử thì ta không thể tính bằng các con số có số mũ vài chục vài
+                    trăm
+                    được, vì vậy họ sẽ sử dụng phân
+                    bố xấp xỉ chuẩn cho những trường hợp này.
+                    <br>
+                    <br>
+                    <u>Binomial Distribution:</u>
+                    <br>
+                    Như đã học, Binomial Distribution sẽ có 2 thông số là <span style="color: red;">n và p</span>, lần lượt biểu thị cho số phép thử và xác suất ra "success" ở mỗi lần thử.
+                    Ở dạng đó ta có <span style="color: red;">mean μ = np</span> và <span
+                        style="color: red;">variance σ&#178; = np(1 − p). </span> <br> <br>
+                    <u>Poisson Distribution:</u>
+                    Poisson cũng vậy, đôi khi ra sẽ gặp phải trường hợp có thông số rất lớn ta cũng sẽ phải sử dụng phân
+                    bố
+                    xấp xỉ chuẩn. Các thông số của Poisson sẽ là
+                    <span style="color: red;">μ = λ</span> và <span style="color: red;">σ&#178; = λ.</span> <br><br>
+                    Các công thức xác suất cho 2 trường hợp này: <br>
+                    <img src="img/approximateBinomial.png" alt="">
+                    <br>
+                    Nó sẽ được áp dụng hiệu quả nếu μ lớn hơn 5.
+                    <br>
+                </p>
+
+                <h3>4.8 Exponential Distribution (Phân bố mũ)</h3>
+                <p>
+                    Với Poisson, ta có <span style="color: red;">λ</span> là số lượng trung bình/ 1 khoảng thời gian
+                    hoặc
+                    không gian. Thì với phân bố mũ,
+                    nó sẽ tính về khoảng thời gian hay không gian giữa 2 lần suất hiện liên tiếp. <br>
+                    VD: Với Poisson, ta có λ = 5 cuộc gọi/ ngày, thì với phân bố mũ, ta sẽ quan tâm tới khoảng cách
+                    trung
+                    bình giữa 2 lần suất hiện liên tiếp, tức trung bình <span style="color: red;">mean = 1/λ</span> = 4.8 giờ.
+                    <br>
+                    <br>
+                    Hàm phân bố xác suất (Probability density function) :
+                    <br>
+                    <img src="img/exponentialDenFun.png" alt="">
+                    <br>
+                    Cái hàm này là f nhỏ, <u>phân bố</u> chứ không phải là hàm tính xác suất nhé. Nên nhớ là phần biến
+                    liên
+                    tục thì ta sẽ tính xác suất
+                    bằng cách tích phân trong 1 khoảng nếu muốn tính xác suất để X nó rơi vào khoảng đó.
+                    <br>
+                    <br>
+                    <span style="color: red;">mean (kỳ vọng) :</span> và <span style="color: red;">variance (phương
+                        sai)</span> cho exponential distribution:
+                    <br><img src="img/exponentialMean.png" alt="">
+                    <br>
+                </p>
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- chapter 6 -->
+        <div>
+            <div style="height: 10px; width: 100%; background-color: black; margin-top: 72px; margin-bottom: 40px;">
+            </div>
+            <div style="margin-top: 20px;" class="chapter2-advice">
+                <p>
+                    Chapter này khá đơn lẻ bởi nó ít liên kết nhất với các chapter khác. Bạn có một tập dữ liệu,
+                    cái tập đấy gọi là <span style="color: red;">sample</span>.
+                </p>
+            </div>
+
+            <h2>Chapter 6: Descriptive Statistics (thống kê mô tả)</h2>
+            <div>
+                <h3>6.1 Numerical Summaries of Data</h3>
+                <p>
+                    Ta có n observations(quan sát) trong sample là x1, x2, x3, ... xn. <br>
+                    <br>
+                    <span style="color: red;">Sample mean</span>: <br>
+                    <img src="img/611.png" alt="">
+                    <br>
+                    Kỳ vọng của sample đơn giản là trung bình của các giá trị.
+                    <br> <br>
+                    <span style="color: red;">Sample variance</span>: <br>
+                    <img src="img/612.png" alt="">
+                    <br>
+                    Phương sai là tổng bình phương sai số chia cho n-1. Nhưng ấn được máy tính nên không cần nhớ cái
+                    cồng
+                    kềnh này nhé. <br> <br>
+                    <span style="color: red;">Sample standard deviation</span> ký hiệu là <span
+                        style="color: red;">s</span>. <br>
+                    <span style="color: red;">Sample range :</span> <img src="img/613.png" alt="">
+                </p>
+
+                <h3>6.2 Stem-and-Leaf Diagrams</h3>
+                <p>
+                    Khi có nhiều dữ liệu, họ sẽ chia thành cài bảng này cho dễ nhìn hơn. VD: <br>
+                    <img src="img/621.png" alt=""> <br>
+                    Giải: Dữ liệu mà ta có sẽ là : 101, 105, 110, 115, 118, .... . Nói chung là cột 'leaf' thì là 1 chữ
+                    số,
+                    sau đó
+                    nối với bên 'stem'.
+                    <br>
+                    <br>
+                    - <span style="color: red;">sample median</span> (khác với <span style="color: red;">sample
+                        mean</span>)
+                    là giá trị nằm giữa của các dữ liệu này.
+                    Nếu dữ liệu có n số thì <span style="color: red;">sample median</span> sẽ là số thứ (n+1)/2. nếu
+                    (n+1)/2
+                    mà ra dạng x,5 thì <span style="color: red;">sample median</span>
+                    sẽ = trung bình số thứ x và số thứ x+1.
+                    <br> VD1: cho sample: 1, 3, 5, 6, 8, 9, 10. <br>
+                    Giải: Số số hạng là n=7, vậy thì (n+1)/2 = 4 suy ra sample median = số thứ 4 là 6. <br>
+                    VD2: cho sample: 2, 3, 4, 6, 7, 8. <br>
+                    Giải: Số số hạng là n=6, vậy thì (n+1)/2 = 3.5 suy ra sample median = trung bình số thứ 3 và thứ 4
+                    là
+                    (4+6)/2
+                    = 5. <br>
+                    <br>
+                    - <span style="color: red;">sample mode</span> là giá trị xuất hiện nhiều nhất, nếu tất cả các số đều
+                    có
+                    số lượng như nhau thì không có <span style="color: red;">sample mode</span>
+                    <br> <br>
+                    - <span style="color: red;">Quartiles</span>:
+                    <br>
+                    Ta chia data thành 4 phần bằng nhau thì đó gọi là Quartiles, có 3 điểm là q1, q2 (chính là median),
+                    q3.
+                    Xấp xỉ 25% số lượng observations ở dưới q1,
+                    50% dưới q2 và 75% dưới q3.
+                    Cách tính q1: số thứ (1+n)/4 , nếu ra .5 thì lấy 2 số gần đó nhất chia trung bình<br>
+                    Cách tính q2: là median. <br>
+                    Cách tính q3: số thứ (1+n) x 3/4 , nếu ra .5 thì lấy 2 số gần đó nhất chia trung bình<br> <br>
+                    - <span style="color: red;">interquartile range</span>: IQR = q3-q1.
+                </p>
+
+                <h3>6.3 Frequency Distributions and Histograms (Kiểu theo tần số, số lần xuất hiện hay tỉ lệ ấy)</h3>
+                <p>
+                    <span style="color: red;">Relative frequency distribution</span> Ví dụ: <br>
+                    <img src="img/631.png" alt=""> <br> <br>
+                    <span style="color: red;">Cumulative frequency distribution</span> ví dụ: <br>
+                    <img src="img/632.png" alt=""> <br>
+                    Nhớ lại: Cumulative là tích lũy, nó sẽ bằng tổng từ cái nhỏ nhất đến nó. <br>
+                    <br>
+                    <span style="color: red;">Histogram</span> ví dụ: <br>
+                    <img src="img/633.png" alt=""> 
+                </p>
+
+                <h3>6.4 Box plot</h3>
+                <p>
+                    Như phần 6.2, bạn đã biết được p1, p2, p3 là gì rồi. Và giờ ta dùng chúng để kiểu sàng lọc những
+                    phần tử
+                    quá khác biệt vậy.
+                    <span style="color: red;">Box plot</span> có 2 đầu mút. Bây giờ tính q3 + 1.5IQR, rồi lấy số
+                    lớn
+                    nhất trong data mà nhỏ hơn giá trị đấy làm
+                    đầu mút trên, sau đó tính q1-1.5IQR, lấy số nhỏ nhất trong data mà lớn hơn số đấy làm đầu mút
+                    dưới,
+                    vậy là đã có box plot, nếu trong data có số nào không nằm trong đó thì
+                    gọi là <span style="color: red;">outlier</span>. <br>
+                    <img src="img/641.png" alt="">
+                </p>
+            </div>
+
+
+        </div>
+
+        <!-- chapter 7 -->
+        <div>
+            <div style="height: 10px; width: 100%; background-color: black; margin-top: 72px; margin-bottom: 40px;">
+            </div>
+            <div style="margin-top: 20px;" class="chapter2-advice">
+                <p>
+                    
+                </p>
+            </div>
+
+            <h2>Chapter 7: Sampling Distributions and Point Estimation of Parameters</h2>
+            <div>
+                <h3>7.1 Introduction</h3>
+                <p>
+                    Ta chọn ra X1, X2, X3, ... , Xn và gọi tập này là <span style="color: red;">random sample</span> với
+                    kích thước n.
+                    <br> VD: chọn 100 cái điện thoại từ nhà máy để test.
+                    <br>
+                    <br>
+                    <span style="color: red;">Sample mean</span> và <span style="color: red;">sample variance</span> gọi là
+                    <span style="color: red;">Statistic</span>(bởi nó là của sample):
+                    <br>
+                    <img src="img/711.png" alt="">
+                    <br>
+                <div style="border: 2px solid black; border-radius: 5px; margin-bottom: 20px;">
+                    Nên nhớ đây là của <span style="color: red;">Sample</span> nhé, và chúng gọi là <span
+                        style="color: red;">Statistic</span> được kí hiệu như trên. Chứ của <span style="color: red;">Population</span> thì
+                    gọi là
+                    <span style="color: red;">Parameter</span> được ký hiệu là
+                    <span style="color: red;">μ và σ&#178;</span>. <br>
+                </div>
+
+                <h3>Point Estimation</h3>
+                - Các <span style="color: red;">Sample mean</span> và <span style="color: red;">sample variance</span> là
+                <span style="color: red;">Statistic</span>, ta gọi chúng lần
+                lượt là <span style="color: red;"><u>point estimator</u></span> của <span style="color: red;">mean
+                    μ</span>
+                và <span style="color: red;">variance σ&#178;</span> của <span style="color: red;">Population</span>.
+                <br> <br>
+                - Còn khi tính ra số cụ thể, ta gọi nó là <span style="color: red;"><u>point estimate</u></span>
+                <br>
+                </p>
+
+                <h3>7.2 Sampling Distributions and the Central Limit Theorem</h3>
+                <h3>Central Limit Theorem</h3>
+                <p>
+                    Một Population có các tham số là <span style="color: red;"> μ và σ&#178;</span>, và ta có <span
+                        style="color: red;">sample mean ̅ x</span>. Bạn nhớ lại phần 4.6 khi ta học standard normal
+                    distribution, thì cách tính Z
+                    sẽ là <br> <img src="img/standardizeToZ.png" alt="">. <br>
+                    Còn bây giờ ta chỉ tính cho <span style="color: red;">sample</span>, với n là số số hạng trong
+                    sample ta
+                    có: <br>
+                    <img src="img/721.png" alt="">
+                    <br>
+                </p>
+
+                <div style="border: 2px solid black; border-radius: 5px; margin: 20px 0px;">
+                    <p>
+                        - Nếu như Population có mean μ và variance σ&#178; thì khi ta lấy ra 1 sample, nó sẽ có các
+                        thông số
+                        :
+                        <br> <img src="img/722.png" alt=""> <br>
+                        - Nếu Population là phân bố chuẩn, thì sample cũng là phân bố chuẩn. <br>
+                        - Nếu Population không phải phân bố chuẩn, thì sample sẽ là phân bố xấp xỉ chuẩn nếu như kích
+                        thước(lượng dữ liệu) ≥ 30. <br>
+                    </p>
+                </div>
+
+                <h3>Sampling Distribution of a Difference in Sample Means</h3>
+                <p>
+                    Cái này là khi ta so sánh 2 cái sample với nhau. Ví dụ so sánh độ chênh lệch tuổi thọ chó với mèo
+                    chẳng
+                    hạn, thì ta sẽ có: <br>
+                    <img src="img/723.png" alt="">
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- test 3 -->
+    <div id="test3" class="tabcontent">
+
+        <div style="height: 10px; background-color: black; width: 100%; margin-bottom: 40px;"></div>
+        <h1 style="font-size: 50px;padding-left: 50px;">TEST 3: Chapter 8, 9, 10, 11</h1>
+        <div style="height: 10px; background-color: black; width: 100%;"></div>
+
+        <!-- chapter 8 -->
+        <div>
+            <h2>Chapter 8: Statistical Intervals for a Single Sample</h2>
+            <h3>8.1 Introduction</h3>
+            <p>
+                <span style="color: red;"> Confidence interval (khoảng tin cậy)</span> là khoảng mà ta tính ra từ các dữ
+                liệu của sample để dự đoán thông số của Population.
+                Ví dụ 1-α <span style="color: red;">level of confidence</span> của μ tức là: <br>
+                <u>Xác suất để μ nằm trong khoảng tin cậy đó là 1-α</u> <br>
+                <img src="img/811.png" alt=""> <br>
+                L: Lower-confidence limit <br>
+                U: Upper-confidence limit <br>
+
+            <div style="border: 2px solid black; border-radius: 5px; padding: 5px;">
+                <p>
+                Ví dụ: Ta không biết tuổi thọ của tất cả các con chó là bao nhiêu, ta sẽ thi thu thập dữ liệu của 100
+                con.
+                Vậy ta sẽ có <span style="color: red;">sample mean</span>, ví dụ sample mean = 10 năm. Sau đó ta tính
+                khoảng
+                tin cậy 95%, tức α = 5%, ra [7.5, 12,5] chẳng hạn, thì
+                tức là <span style="color: red;">mean μ</span> của Population sẽ có 95% khả năng nằm trong khoảng đó. <br>
+            </p>
+            </div>
+
+            <h3>8.2 Confidence Interval for a Population Mean (Khoảng tin cậy cho mean)</h3>
+            <h3>Ta sẽ chia ra 3 trường hợp</h3>
+            <p>
+                - Trường hợp 1: <span style="color: red;">variance σ&#178;</span> đã biết. <br>
+                - Trường hợp 2: Đây là 1 phân bố bất kỳ, không nhất thiết phải là <span
+                    style="color: red;">normal</span>,
+                nhưng phải có size lớn (≥ 40). <br>
+                - Trường hợp 3: <span style="color: red;">variance σ&#178;</span> chưa biết. <br>
+                <br> <br>
+                <u>Trường hợp 1: <span style="color: red;">variance σ&#178;</span> đã biết</u>
+                <br> 1–α confidence interval cho mean μ là: <br>
+                <img src="img/821.png" alt=""> <br> <br>
+                Zα/2 là giá trị của Z để xác suất P(Z > zα/2) = α/2. <br>
+                Để dễ hình dung, ta có α=5%, Z<sub>α/2</sub>= Z<sub>0.025</sub> = 1.96, hay P(Z>1.96) = α/2 = 0.025 <br>
+                <img src="img/822.png" alt=""> <br> <br>
+
+                VD: Tuối thọ của bóng đèn được biết là có phân bố chuẩn và có σ = 25 giờ. Ta có một sample gồm 20 bóng
+                và
+                chúng có tuổi thọ trung bình là 1014 giờ.
+                Tìm 95% confidence interval cho mean μ của loại bóng đèn này . <br>
+                Phân tích: Population Loại bóng đèn này phân bố chuẩn nên sample cũng có phân bố chuẩn, chúng ta đã biết
+                standard deviation σ = 25 giờ.
+                Giải: Ta có thêm một cái sample gồm 20 bóng có tuổi thọ trung bình là 1014 => <img
+                    style="padding-top: 5px;" src="img/xngang.png" alt=""> = 1014, n=20. Ta phải tính độ tin cậy 95%,
+                tức α = 5%,
+                Zα/2 = 1.96. Thay vào tính đc 1003.04 ≤ μ ≤1024.96 . <br>
+                <br>
+                <u>Còn 1 dạng trong cái này</u>, đó là bắt tính số lượng (n) để có thể đạt được một khoảng confidence
+                interval nhất định.Ta thấy rằng để dự đoán mean μ của tổng thể, thì càng nhiều dữ liệu càng tốt, điều đố
+                khá
+                dể hiểu và
+                bạn cũng có thể nhìn vào phương trình trên kia để thấy điều đó, khi n càng lớn thì confidence interval
+                càng
+                thu hẹp lại. Vì vậy để tự tin rằng ta có một khoảng confidence interval bằng bao nhiêu đó thì
+                ta cũng phải có số lượng dữ liệu nhất định. Công thức: <br>
+                <img src="img/823.png" alt=""> <br>
+                E ở đây là <img src="img/824.png" alt=""> <br>
+                VD: Lấy lại VD ở trên, thử tính lượng bóng đèn cần để ta có 95% confident để sai số khi ta ước tính mean
+                μ
+                của tổng thể &#60; 5 giờ. <br>
+                Giải: Ta có : α = 5%, => α/2 = 0.025. σ = 25 giờ, E = 5 giờ, thay vào công thức n = 96.05, tuy nhiên ta
+                luôn
+                phải làm tròn lên nên n=97.
+                <br> <br> <br>
+                <u>Trường hợp 2: Đây là 1 phân bố bất kỳ, không nhất thiết phải là <span
+                        style="color: red;">normal</span>,
+                    nhưng phải có size lớn (≥ 40).</u>
+                <br>
+                1–α confidence interval cho mean μ: <br>
+                <img src="img/825.png" alt="">
+                <br> Bời vì đây không phải phân bố chuẩn nên không có σ nhé. Chỉ có S cho cái sample đấy thôi, nhưng
+                cũng
+                chả khác nhau đâu.
+                <br><br>
+                <u>Trường hợp 3: <span style="color: red;">variance σ&#178;</span> chưa biết biết.</u>
+                <br> Vì σ chưa biết nên chỉ có S, hãy nhớ trường hợp σ chưa biết, đồng thời là phân bố chuẩn thì mới
+                dùng t,
+                còn không phải dùng z. Công thức: <br>
+                <img src="img/826.png" alt=""> <br> <br>
+            <h3>8.3 Large-Sample Confidence Interval for a Population Proportion (Confidence Interval cho xác suất)</h3>
+           <p> Nó cũng giống như mean thôi, mỗi tội là tìm Confidence Interval cho xác suất. Công thức: <br>
+            <img src="img/827.png" alt=""> <br>
+            Trong đó <img src="img/828.png" alt=""> là xác suất của sample, x là cái lượng thỏa mãn, còn n là kích thước
+            sample. Nếu để ý, bạn sẽ thấy pˆ(1-pˆ) trong công thức chính là σ&#178; giống như phần binorminal, nên suy
+            cho
+            cùng,
+            công thức này y hệt phần trên.<br>
+            <br>
+            VD: 1000 ca ung thư được lấy ngẫu nhiên, và 823 ca chết sớm. Tính 95% confidence interval cho tỉ lệ chết
+            sớm.
+            <br>
+            Giải: Ta có x = 823, n = 1000 => pˆ = 0.823. α=5% = 0.05 => α/2 = 0.025 => Zα/2 = 1.96. Vậy ta tính được
+            0.799 ≤
+            p ≤ 0.847. <br>
+            <br> <br>
+            </p>
+
+            </p>
+            <div style="border: 2px solid black; border-radius: 5px; padding: 5px; margin-bottom: 20px;">
+                <p>
+                    Trong chap này ta mới chỉ đọc thấy confidence interval được giới hạn 2 đầu, nhưng trong bất kỳ dạng
+                    nào
+                    đề có các trường hợp confidence interval 1 phía, Ví dụ như Phần 8.1 trường hợp 1, ta sẽ có các bài
+                    toán
+                    bắt tính confidence interval cho 1 phía,
+                    <br>
+                    <img src="img/888.png" alt=""> <br>
+                    <u>Mọi trường hợp 1 phía thì Zα/2 sẽ được thay bằng Zα. </u>
+                </p>
+            </div>
+        </div>
+
+        <div style="height: 10px; background-color: black; width: 100%; margin-top: 30px;"></div>
+
+        <!-- chapter 9 -->
+        <div>
+            <h2>Chapter 9: Test of Hypotheses for a Single Sample (Kiểm chứng giả thuyết cho 1 cái sample)</h2>
+            <div class="chapter2-advice">
+                <p>
+                    Chapter 8 ta đã biết cách tính <span style="color: red;">confidence interval</span>, thì chapter này
+                    ta
+                    sẽ dùng nó để xem 1 cái kết luận nào đó có sai hay không.
+                    Ví dụ có 1 người nói số giờ làm trung bình trong 1 ngày của người Việt là 4.5 tiếng , thì để kiểm
+                    chứng
+                    câu nói này, ta sẽ đi thu thập dữ liệu 1000 người, sau đó ta sẽ tính <span
+                        style="color: red;">confidence interval</span> như trên chapter 8, rồi sau đó
+                    so sánh 2 dữ liệu để đưa ra kết luận.
+                </p>
+            </div>
+            <h3>9.1 Hypothesis Testing (kiểm chứng giả thuyết) </h3>
+            <p>
+                <span style="color: red;">Statistical hypothesis (giả thuyết)</span> là 1 cái phát biểu về Parameter của
+                Population. Nhớ lại rằng Parameter là các thông số của Population, còn Statistic là của Sample, rõ ràng
+                là
+                các Parameter thì chúng ta
+                chưa thể biết, ta chỉ có thể ước chừng chúng bằng cách lấy 1 sample để tính confidence interval như ở
+                chapter 8. <br>
+                Vì vậy ta sẽ lấy 1 cái sample để tính confidence interval, sau đó so sánh với cái giả thuyết để đưa ra
+                kết
+                luận (VD như cái đóng khung ở trên). Và với ví dự đó,
+                ta có : <br>
+                <img src="img/911.png" alt=""> <br>
+                Trong 1 vài trường hợp, có thể giả thuyết sẽ là 1 phía: <br>
+                <img src="img/912.png" alt=""> <br>
+                VD: 1 phát biểu rằng chiều cao trung bình người Việt lớn hơn 1m65. khi đó H1 : μ>1m65. <br>
+                <br>
+            <div style="border: 2px solid black; border-radius: 5px; padding: 5px;">
+                <p>
+                    Như đã thấy ở trên, <span style="color: red;">H0</span> là <span style="color: red;">null
+                        hypothesis</span>, <span style="color: red;">H1</span> là <span style="color: red;">alternative
+                        hypothesis</span>. <br>- Nếu <span style="color: red;">reject</span> H0 thì có nghĩa là ta có
+                    bằng chứng đủ mạnh để kết luận rằng H1 đã đúng. <br>- Còn nếu không <span
+                        style="color: red;">reject</span> H0, thì ta không có đủ bằng chứng là H0 đã đúng. <br>
+                    <br> <img src="img/913.png" alt=""> <br>
+                    <span style="color: red;">Note</span>: Nhìn biết đồ trên, nó có ý nghĩa rằng ta có 1 cái sample và
+                    ta
+                    tính được rằng khoảng tin cậy confidence interval là [4.1, 4.9], tức là H0 cho μ bằng bất kỳ số nào từ 4.1
+                    đến
+                    4.9, ta đều phải <span style="color: red;">fail to reject</span>, còn H0 mà nằm ngoài khoảng đấy,
+                    thì ta <span style="color: red;">reject</span>
+                    .
+                    Và nên nhớ 1 điều, H0 thì <span style="color: red;">luôn luôn là dấu </span> "=", và H1 thì ghi là
+                    <span style="color: red;">khác một giá trị cố định</span>, nhưng thực chất ta chỉ reject H0 và chấp
+                    nhận
+                    H1 khi giá trị của H0 <span style="color: red;">nằm ngoài khoảng tin cậy (confidence
+                        interval)</span>.
+                    <br> <br> <br>
+                    VD: Có 1 người nghĩ rằng chiều cao trung bình của người Việt là 1m65, để ông đấy xem suy đoán
+                    của
+                    mình có đúng hay không, ông ta đi khảo sát 1000 người ở Hà Nội. Ông ta tính được khoảng tin cậy là
+                    [1m55, 1m66], Vì vậy ông ta phải <span style="color: red;">fail to reject H0</span>, bởi vì H0: μ =
+                    1m65, nằm trong khoảng tin cậy. <br> <br> <br>
+                    Tuy nhiên, các bạn phải hiểu rằng ta chỉ tính trên sample để kết luận, nên đôi khi kết luận của ta
+                    có
+                    thể sai do dữ liệu ta thu thập là toàn những trường hợp đặc biệt. Như khi ta tính khoảng tin cậy 95%
+                    thì
+                    ta có 95% khả năng là đúng,
+                    rõ ràng ta vẫn có 5% khả năng kết luận sai. Và sự sai sót ấy chia thành 2 trường hợp: <br>
+                    - <span style="color: red;">Type 1 error </span>:
+                    Reject H0 khi mà nó đúng. Để dễ hình dung hãy nhìn lại hình bên trên, nó có nghĩa rằng tiên đoán
+                    trước
+                    đó của mình về mean là đúng, nhưng do thu thập được toàn dữ liệu cùi mà ta tính được khoảng tin cậy
+                    bị
+                    lệch đi, dẫn đến mean μ của ta nằm ngoài khoảng tin cậy. <br>
+                    - <span style="color: red;">Type 2 error </span>:
+                    Fail to reject H0, tức là mình không bác bỏ H0 trong khi nó sai, ngược lại với Type 1.
+                </p>
+            </div>
+            </p>
+
+            <h3>9.2 Tests on the Mean of a Normal Distribution N(μ, σ&#178;)</h3>
+            <p>
+                Trong phần 9.1 mình đã giải thích khá rõ về <span style="color: red;">reject</span> và <span
+                    style="color: red;">fail to reject</span>, các bạn cũng đã hiểu về <span
+                    style="color: red;">confidence
+                    interval</span>. Và trong các bài toán cụ thể,
+                các bạn sẽ gặp 2 trường hợp để tính toán rồi đưa ra kết luận về H0: <br> <br>
+                - Case 1: Variance σ&#178; của Population đã biết. <br>
+                <u>Test Statistic:</u> <br>
+                <img src="img/921.png" alt=""> <br>
+                Trong bài toán cụ thể, ta sẽ tính <u>Test Statistic</u>, sau đó so sánh nó với các Z của giới hạn
+                của
+                khoảng tin cậy(confidence interval). Nếu nằm ngoài thì reject H0 thôi. <br>
+                <img src="img/922.png" alt=""> <br>
+                Như hình trên, <br> (a) là khoảng tin cậy có 2 phía với H1: μ &#8800; μ0 <br> (b) là khoảng tin cậy 1
+                phía
+                với H1: μ > μ0 <br> (c) là khoảng tin cậy 1 phía với H1: μ &#60; μ0. <br>
+                <br>
+                - Case 2: Variance σ&#178; của Population chưa biết. <br>
+                <u>Test Statistic:</u> <br>
+                <img src="img/924.png" alt=""> <br>
+                Khi không biết σ thì dùng <span style="color: red;">t</span>, khi biết σ thì dùng <span
+                    style="color: red;">z</span>, rất dễ, không khác gì nhau. <br>
+                <img src="img/925.png" alt=""> <br>
+            </p>
+
+            <h3>9.3 Tests on a population proportion (Kiểm định xác suất)</h3>
+            <p>
+                Phần trên thì kiểm định trên mean, bây giờ thì kiểm định xác suất, cách tính thì không khác gì nhau.
+                <br>
+                <br>
+                <img src="img/926.png" alt=""> <br>
+                Thay vì tiên đoán trước giá trị trung bình của cái gì đấy, thì H0 của phần này sẽ là tiên đoán trước xác
+                suất. Và ta cũng loại chúng nếu chúng nằm ngoài khoảng tin cậy thôi.
+                <br> <br>
+                Ta sẽ có xác suất trong sample là p mũ, sau đó ta sẽ tính <u>Test Statistic:</u> <br>
+                <img src="img/927.png" alt=""> <br>
+                Rồi so sánh với Z của các giới hạn của khoảng tin cậy confidence interval: <br>
+            </p>
+
+            <div style="border: 2px solid black; border-radius: 5px; padding: 5px; margin: 10px 0px;">
+                <p>
+                    Ví dụ: Một tạp chí nói rằng 1 nửa số tiến sĩ sẽ học tiếp sau khi tốt nghiệp. Dữ liệu từ một khảo sát
+                    cho
+                    thấy 117 người trong số 484 người ở trường X học tiếp
+                    sau khi tốt nghiệp. Câu hỏi: với α = 0.05, đưa ra kết luận về phát biểu trước đó. <br>
+                    Giải: <br> H0: P0 = 0.5 (1 nửa) <br>
+                    Ta có P mũ = 117/484 = 0.24. Test Statistic Z0 = -11.44 . <br>
+                    α = 0.05 => Zα/2 = Z<sub>0.025</sub> = 1.96. Mà |Z0| = 11.44 > 1.96, nằm ngoài khoảng tin cậy nên ta
+                    reject H0.
+                </p>
+            </div>
+        </div>
+
+        <div style="height: 10px; background-color: black; width: 100%; margin-top: 30px;"></div>
+
+        <!-- chapter 10 -->
+        <div>
+            <h2>Chapter 10: Statistical Inference for Two Samples (Suy luận thống kê cho samples)</h2>
+            <div class="chapter2-advice">
+                <p>
+                    Chapter 9 chúng ta đã làm quen với suy luận thống kê của <span style="color: red;">1 sample</span>,
+                    về
+                    mean μ và xác suất p. Còn chapter 10 thì
+                    cũng sẽ làm về mean μ và xác suất p, chỉ khác là sẽ thực hiện trên 2 sample, 2 cái trừ cho nhau. Sẽ
+                    có 2
+                    cái chính là tính confidence interval cho hiệu
+                    của 2 mean μ của 2 tổng thể khác nhau, và kiểm định H0 của nó.
+                </p>
+            </div>
+
+            <h3>10.1 Inference on the Difference in Means of Two Normal Distributions (Hiệu 2 mean)</h3>
+            <p>
+                Cũng như khi tính confidence interval cho 1 sample, thì phần này cũng chia thành 2 trường hợp: σ đã biết
+                và
+                chưa biết. <br>
+                <br> <u>- Case 1: σ đã biết</u> <br>
+                Khi đó, hiệu 2 mean sẽ có : <br>
+                <img src="img/1011.png" alt=""> <br> <br>
+                Khi này bạn sẽ dễ dàng đoán được công thức của 1-α confidence interval của hiệu 2 mean: <br>
+                <img src="img/1012.png" alt=""> <br> <br>
+                <br> <u>- Case 2: σ chưa biết</u> <br>
+                Khi mà σ chưa biết thì ta chỉ tính được các <span style="color: red;">variance s</span> của <span
+                    style="color: red;">sample</span> thôi. Và khi này, sẽ có 1 cái variance chung được gọi là
+                <span style="color: red;">pooled estimator</span> của <span style="color: red;">σ&#178;</span>
+                <br> <img src="img/1016.png" alt=""> <br>
+                Công thức 1-α confidence interval của hiệu 2 mean, ghi nhớ là <span style="color: red;">t</span> sẽ có
+                <span style="color: red;">n1+n2-2</span> bậc tự do: <br>
+                <img src="img/1013.png" alt=""> <br>
+            </p>
+
+            <div style="border: 2px solid black; border-radius: 5px; padding: 10px; margin: 20px 0px;">
+                Note: Các trường hợp đều có những bài toán tính confidence interval 1 phía. Và ta chỉ cần thay α/2 bằng
+                α
+                với những bài toán ấy.
+            </div>
+            <div style="border: 2px solid black; border-radius: 5px; padding: 10px; margin: 20px 0px;">
+                <h3>Hypothesis Tests on the Difference in Means</h3>
+                <p>
+                    Cho hypothesis: <br>
+                    <img src="img/1018.png" alt=""> <br>
+                    Khi này H0 sẽ là một phát biểu về độ chênh lệch giữa mean của 2 tổng thể: ∆0. <br> <br>
+                    VD: Một người cho rằng độ chênh lệch tuổi thọ trung bình giữa nam hơn nữ là 2 tuổi. Khi đó ta có H0:
+                    μ1
+                    − μ2 = 2 tuổi. <br> <br>
+                    Trong các bài toán cụ thể, ta lại gặp 2 trường hợp : σ đã biết và chưa biết. Và chúng ta làm y hệt
+                    các
+                    bài toán về H0 trước đó: tính test Statistic và so sánh với các giới hạn của confidence interval,
+                    nếu
+                    nằm ngoài thì reject H0<br> <br>
+                    <u>- Case 1: σ đã biết</u> <br>
+                    Test Statistic: <br>
+                    <img src="img/1019.png" alt=""> <br> <br>
+                    <u>- Case 2: σ chưa biết</u> <br>
+                    Test Statistic: <br>
+                    <img src="img/10110.png" alt=""> <br> (Sp là <span style="color: red;">pooled estimator</span>)
+                </p>
+            </div>
+
+            <h3>10.6 Inference on the Two Proportions (Hiệu xác suất của 2 tổng thể)</h3>
+            <p>
+                1-α confidence interval của hiệu 2 xác suất: <br>
+                <img src="img/1061.png" alt=""> <br>
+                p mũ là xác suất trong sample. <br> <br>
+            </p>
+
+            <h3>Tests on the Difference in Population Proportions</h3>
+            <p><img src="img/1062.png" alt=""> <br> <br>
+            Tương tự như các bài toán trước đó, ta có test statistic: <br>
+            <img src="img/1063.png" alt=""></p>
+        </div>
+
+        <div style="height: 10px; background-color: black; width: 100%; margin-top: 30px;"></div>
+
+        <!-- chapter 11 -->
+        <div>
+            <h2>Chapter 11: Simple Linear Regression and Correlation (Hồi quy tuyến tính)</h2>
+            <div class="chapter2-advice">
+                <p>
+                    Nếu chỉ học qua môn thì gần như không cần học sâu chương này (Với điều kiện những chương trước đã khá vững :D). 
+                </p>
+            </div>
+
+            <h3>11.1 Empirical Models (Mô hình thực nghiệm)</h4>
+            <p>
+                Chúng ta sẽ có 2 cái dữ liệu khác nhau, và ta xem chúng ta xem chúng có mối liên hệ chặt chẽ với nhau không. Vậy ta sẽ 
+                lập 1 phương trình tuyến tính giữa 2 cái dữ liệu này, xem có thể dự báo trước giá trị của biến này theo biến kia hay không. Biến cần dự đoán là 
+                <span style="color: red;">dependent variable</span> và biến mà mình dùng nó để suy ra biến kia là <span style="color: red;">independent variables</span>. <br> <br>
+                Ví dụ: cho 1 tập các dữ liệu về nhiệt độ ban ngày ở HN, và 1 tập các dữ liệu về các mặt đường bị rạn nứt và tất nhiên 2 tập này phải liên kết từng cặp với nhau, rồi lập ra một phương trình tuyến tính giữa 2 thứ đó. Khi này nếu như 
+                ta thấy nó có mối tương quan lớn thì sau đó ta có thể dự đoán về số vết nứt nhờ vào nhiệt độ. Và nhiệt độ ở HN là <span style="color: red;">independent variable</span> và số 
+                vết nứt là <span style="color: red;">dependent variable</span> <br> <br>
+                Linear Regression function (hồi quy tuyến tính) là hàm khi xây dựng mối tương quan giữa 2 dữ liệu kia : <br>
+                <img src="img/1111.png" alt=""> <br> <br>Thực ra công thức trên chả khác gì Y = a.X + b, nhưng viết khác bởi nó có các mục đích khác nhau. <br>
+            </p>
+            <h4>11.2 Simple Linear Regression</h4>
+            <p>
+                Có n cặp dữ liệu: <br> 
+                <img src="img/1121.png" alt=""> <br>
+                Từ các cặp dữ liệu trên, ta vẽ ra hàm tuyến tính như ở phần 11.1 sao cho nó là "best fit" với các dữ liệu. Và chúng ta dùng phương pháp đó là <span style="color: red;">method of least squares</span>, tức là
+                 <u>tối thiểu hóa tổng bình phương các sai số(ε).</u> Để dễ hiểu hơn, bạn thấy ta có phương trình hồi quy như ở 11.1, nhưng rõ ràng ta không thể tính giá trị của y<sub>i</sub> bằng cách gán x<sub>i</sub> như các bài toàn bình thường bởi vì 
+                 luôn có sai số: <br> <img src="img/1122.png" alt=""> <br> <br>
+                 Vì vậy, với sai số là ε, thì mỗi y<sub>i</sub> ta sẽ có : <br> 
+                 <img src="img/1123.png" alt=""> <br>
+                 Do đó, tổng bình phương sai số được nhắc ở trên là : <br>
+                 <img src="img/1124.png" alt=""> <br>
+                <u>Note: Trên thực tế, ta không có hàm hồi quy cho toàn bộ dữ liệu được nên ta chỉ ước tính nó bằng những dữ liệu mà ta có sẵn, 
+                 Và từ trước đến giờ mình chỉ đang giới thiệu về lí thuyết, các bạn không cần nhớ các công thức ở trên nhưng phải hiểu. Và về sau các công thức cũng giống nhưng kí hiệu khác, bởi vì 
+                 trên là các công thức cho tổng thể, mà ta chỉ tính trên các dữ liệu có sẵn (sample) thôi.    
+                </u> <br>
+                Các tham số trong phương trình hồi quy tuyến tính đó là: <br>
+                <img src="img/1125.png" alt=""> <br> với : <br>
+                <img src="img/1126.png" alt=""> <br> <br>
+                Và từ đó, ta có <span style="color: red;">estimated linear regression line</span>: <br>
+                <img src="img/1128.png" alt=""> <br> 
+                Sai số <span style="color: red;">residual (giống ε của tổng thể)</span>: <br>
+                <img src="img/1129.png" alt=""> <br>
+                Tổng bình phương các <span style="color: red;">residual e<sub>i</sub></span> là <span style="color: red;">error sum of squares</span>: <br>
+                <img src="img/11210.png" alt=""> <br>
+                Từ đó, ta có công thức <span style="color: red;"> tính ước tính của σ&#178;</span> : <br> <img src="img/11211.png" alt=""> <br>
+            </p>
+            <div style="border: 2px solid black; border-radius: 5px; padding: 10px; margin: 20px 0px;">
+               <p> Sợ nhiều người lú, thì thực ra phần này chỉ gói gọn rằng: <br>
+                - Hồi quy tuyến tính (Regression line): <br>
+                <img src="img/1128.png" alt=""> <br>
+                - Residual (kiểu sai số, độ lệch): <br>
+                <img src="img/1129.png" alt=""> <br> 
+                - Phương sai, tổng bình phương các độ lệch: <br>
+                <img src="img/11211.png" alt=""> <br>
+                Trên đó là các tham số mấu chốt, còn tính thế nào thì các bạn phải hiểu nó đặc trưng cho cái gì. <br></p>
+            </div>
+
+            <h3>11.3 Properties of the Least Squares Estimators (Các ước tính)</h3>
+            <p>
+                <span style="color: red;">estimated standard error of the slope</span> (ước tính sai số của slope) và <span style="color: red;">estimated standard error of the intercept</span>(ước tính sai số của intercept): <br>
+                <img src="img/1131.png" alt=""> <br>
+            </p>
+
+            <h3>11.4 Hypothesis Tests in Simple Linear Regression (Kiểm định H0 trên hồi quy tuyến tính)</h3>
+            <h3>Test trên Slope</h3>
+            <p>
+                Hypotheses: <br> <img src="img/1141.png" alt=""> <br>
+                Nếu đã hiểu về phần kiểm định H0 rồi thì phần này cũng sẽ không xa lạ gì, cũng chỉ là kiểm định về một cái phát biểu bằng cách tính <span style="color: red;">test statistic</span> rồi so sánh với biên rồi kết luận. <br> <br>
+                <span style="color: red;">Test statistic</span>: <br>
+                <img src="img/1142.png" alt=""> <br>
+                Reject H0 nếu : <br>
+                <img src="img/1144.png" alt=""> <br> (Nhớ là <span style="color: red;">n − 2 degrees of freedom.</span>) <br>
+            </p>
+
+            <h3>Trường hợp đặc biệt:</h3>
+            <p>
+                <img src="img/1145.png" alt=""> <br>
+                Nếu <span style="color: red;">Failure to reject H0</span>, tức β<sub>1</sub> = 0 thì sẽ không có mối quan hệ giữa X và Y. <br>
+
+            </p>
+
+            <h3>Test trên Intercept</h3>
+            <p>
+                Hypotheses: <br> <img src="img/1146.png" alt=""> <br>
+                <span style="color: red;">Test statistic</span>: <br>
+                <img src="img/1147" alt=""> <br>
+                Reject H0 nếu : <br>
+                <img src="img/1144.png" alt=""> <br> (Nhớ là <span style="color: red;">n − 2 degrees of freedom.</span>) <br>
+            </p>
+
+            <h3>11.8 Correlation (Hệ số tương quan)</h3>
+            <p>
+                Hệ số tương quan của X và Y là ρ, nhưng với sample, nó sẽ là: <br>
+                <img src="img/1182.png" alt=""> <br>
+                <u>Note</u>: <br>
+                .) −1 ≤ r ≤ 1. <br>
+                .) Nó đặc trưng cho mối liên hệ giữa 2 dữ liệu đó <br>
+                .) r và β<sub>1</sub> có cùng dấu <br>
+                .) r&#178; gọi là <span style="color: red;">coefficient of determination (hệ số xác định)</span> <br> <br>
+                <img src="img/1184.png" alt=""> <br>
+                Như vậy, <span style="color: red;">r</span> càng tiến về 0 thì mối liên hệ giữa X và Y càng thấp, và ngược lại. <br>
+
+            </p>
+
+            <h3>Test Hypotheses about the Correlation Coefficient</h3>
+            <p>
+                Hypotheses: <br>
+                <img src="img/1185.png" alt=""> <br> <br>
+                Test statistic: <br>
+                <img src="img/1186.png" alt=""> <br>
+                Reject H0 nếu : <br>
+                <img src="img/1144.png" alt=""> 
+            </p>
+        </div>
+
+        <div style="height: 10px; background-color: black; width: 100%; margin-top: 30px;"></div>
+
+    </div>
+
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+
+</html>
